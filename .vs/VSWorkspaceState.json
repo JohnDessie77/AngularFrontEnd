@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\functionalities",
+    "\\src\\app\\get-manager",
+    "\\src\\app\\insert",
+    "\\src\\app\\update"
+  ],
+  "SelectedNode": "\\src\\app\\organi.service.spec.ts",
+  "PreviewInSolutionExplorer": false
+}

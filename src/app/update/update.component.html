@@ -1,0 +1,13 @@
+<div>
+    <form class="form">
+      <div class="pageTitle title"> Update Structure/Department Information </div>
+      <div class="secondaryTitle title">Insert Department Name you want to update</div>
+      <input  type="text" class="name formEntry" placeholder="Department Name" name="something" [(ngModel)] = "MyDept"/>
+      <button class="get formEntry" (click)="getManager()">Get</button>
+          <ul class="flight_headers" *ngFor="let org of barg">
+            <li class="departs cell"> Name: <input type="text" name="name" [(ngModel)]="org.name"/> </li><br/>
+            <li class="departs cell"> Description: <input type="text" name="DN" [(ngModel)]="org.description"/> </li><br/>
+            <li class="arrives cell"> managing department:  <input type="text" name="bDN" [(ngModel)]="org.managing_department"/> </li> <br/>
+             <button class="get formEntry" (click)="update(org)">Update</button>
+             <button class="get formEntry" (click)="delete(org)">Delete</button>
+         </ul>

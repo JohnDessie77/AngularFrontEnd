@@ -1,0 +1,53 @@
+<style>
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+  <div>
+    <form class="form">
+      <div class="pageTitle title">Display Structure/Department Information </div>
+      <div class="secondaryTitle title">Insert Department Name</div>
+      <input  type="text" class="name formEntry" placeholder="Name" name="something" [(ngModel)] = "Myid"/>
+      <button class="get formEntry" (click)="getManagers()">Get</button>
+          <ul class="flight_headers" *ngFor="let org of barg">
+            <li class="flight_number cell"> Department Name: {{org.name}} </li><br/>
+            <li class="departs cell"> Description: {{org.description}} </li><br/>
+            <li class="arrives cell"> <Button (click)="showManager()"> Click here to display managing department: </Button> <span [hidden]="!status"> {{org.managing_department}} </span> </li> <br/>
+            <li class="nonstop cell"> <Button (click)="getSubordinates()"> Departments Under Management </Button> <span *ngFor= "let sub of subord"> {{sub.name}}, </span></li><br/><br/>
+         </ul>
+
+
+  <button class="get formEntry" (click)="getAllManagers()">Show all Managing Structures</button>
+
+         <table id="customers" [hidden]="!showbtn">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Managing Department</th>
+  </tr>
+  <tr *ngFor="let al of all">
+    <td>{{al.name}}</td>
+    <td>{{al.description}}</td>
+    <td>{{al.managing_department}}</td>
+  </tr>
+
+

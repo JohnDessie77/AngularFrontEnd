@@ -1,0 +1,7 @@
+<div>
+    <form class="form">
+      <div class="pageTitle title">Insert new Structure/Department</div>
+     <input  type="text" class="name formEntry" placeholder="Name" name="something" [(ngModel)] ="name" />
+     <input  type="text" class="name formEntry" placeholder="Description" name="some" [(ngModel)] = "description"/>
+     <input  type="text" class="name formEntry" placeholder="Managing Department" name="sg" [(ngModel)] = "managing_department"/>
+     <button class="get formEntry" (click)="insertStructure()">Insert</button>

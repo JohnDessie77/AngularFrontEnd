@@ -1,0 +1,18 @@
+button {
+  text-decoration: none;
+  border: 3px solid grey;
+  color: white;
+  padding: 40px 80px;
+  font-size: 28px;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 50px;
+  background:black;
+}
+
+.myButtons {
+display: flex;
+flex-direction:column;
+}
